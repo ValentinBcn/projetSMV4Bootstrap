@@ -1,0 +1,22 @@
+
+
+
+<div class="row">
+  <div *ngFor="let item of boats">
+        <div class="card" style="width: 25rem; margin-right: 10px">
+          <div class="card-body">
+            <h5 class="card-title">  Boat ID : {{item.id}} </h5>
+            <p class="card-text"> Consume : {{item.consume}} </p>
+            <p class="card-text"> Present : {{item.present}} </p>
+            <button class="btn btn-primary btn-sm" (click)="suitPresent()"> Je suis sur le bateau </button>
+            <button class="btn btn-info btn-sm" >Je ne suis pas sur le bateau </button>
+          </div>
+  </div>
+</div>
+
+<br>
+<div class="row" style="margin-top: 200px; margin-left:50px">
+   
+    <button class="btn btn-success" (click)="InitializeListofBoats()" [disabled]="disableButton">Click me </button>
+</div>
+
